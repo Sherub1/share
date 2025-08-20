@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre Trace Numérique - Reflet Numérique</title>
+    <meta name="description"
+        content="Découvrez votre trace numérique, les informations révélées par votre appareil et votre connexion internet. Apprenez à protéger votre empreinte en ligne.">
+    <meta name="keywords"
+        content="trace numérique, empreinte numérique, sécurité en ligne, protection données, VPN, trackers">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/maplibre-gl@latest/dist/maplibre-gl.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/maplibre-gl@latest/dist/maplibre-gl.css" rel="stylesheet" />
+    <script src="data.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Reflet Numérique - Maîtrisez Votre Trace Numérique</h1>
+        <button class="menu-toggle" aria-label="Ouvrir ou fermer le menu de navigation">☰</button>
+        <nav class="nav-menu">
+            <a href="index.html">Accueil</a>
+            <a href="about.html">À propos</a>
+            <a href="https://github.com/votre-profil" title="GitHub" target="_blank" rel="noopener"><i
+                    class="fab fa-github"></i></a>
+            <a href="https://linkedin.com/in/votre-profil" title="LinkedIn" target="_blank" rel="noopener"><i
+                    class="fab fa-linkedin"></i></a>
+            <a href="mailto:reflect.proxdns@gmail.com" title="Contact par email"><i class="fas fa-envelope"></i></a>
+            <button class="theme-toggle" aria-label="Basculer entre le thème clair et sombre">🌙</button>
+        </nav>
+    </header>
+    <main class="container">
+        <a href="index.html" class="back-link">← Retour</a>
+        <section class="content">
+            <h2>Votre Trace Numérique</h2>
+            <div class="data-block">
+                <h3>Aperçu de votre appareil:</h3>
+                <p class="narrative-text">Votre appareil est votre outil de navigation, il dialogue en permanence avec
+                    les serveurs pour vous apporter les sites et services que vous consultez. Ce qui laisse des traces
+                    et des informations. Voyons ça de plus près :</p>
+                <div id="deviceinfo" class="info-section loading"></div>
+            </div>
+            <div class="data-block">
+                <h3>Origine de votre connexion:</h3>
+                <p class="narrative-text">Chaque fois que vous vous connectez, vous laissez une trace numérique via
+                    votre adresse IP, un identifiant qui indique où vous êtes dans le monde, comme le pays, et par quel
+                    FAI elle est gérée. Vous pouvez utiliser un VPN pour protéger votre adresse sur les réseaux publics
+                    :</p>
+                <div id="ipinfo" class="info-section loading"></div>
+                <div id="vpninfo" class="info-section loading"></div>
+            </div>
+            <div class="data-block">
+                <h3>Votre Position dans le Monde:</h3>
+                <p class="narrative-text">Vous pouvez être localisé grâce à des coordonnées, un peu comme un GPS. Cette
+                    carte vous montre où vous vous trouvez, avec une précision variable
+                    selon votre appareil. Explorez votre position ci-dessous :</p>
+                <div id="coords" class="info-section loading"></div>
+                <div id="map"></div>
+            </div>
+            <div class="data-block">
+                <h3>Ceux qui Suivent Votre Trace Numérique:</h3>
+                <p class="narrative-text">Sur Internet, des outils appelés trackers peuvent observer votre activité pour
+                    créer un profil de vos intérêts et de vos habitudes. Avec un bloqueur de trackers, vous pouvez
+                    limiter leur portée. Voici ce qui a été détecté :</p>
+                <div id="trackers" class="info-section loading"></div>
+                <div id="profil" class="info-section loading"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        © 2025 Reflet Numérique. Tous droits réservés.
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description"
+        content="Reflet Numérique : Apprenez à maîtriser votre trace numérique et protégez vos données personnelles.">
+    <meta name="keywords" content="trace numérique, cybersécurité, protection des données">
+    <title>Reflet Numérique - Maîtrisez Votre Trace Numérique</title>
+    <link href="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Reflet Numérique - Maîtrisez Votre Trace Numérique</h1>
+        <button class="menu-toggle">☰</button>
+        <nav class="nav-menu">
+            <a href="#accueil">Accueil</a>
+            <a href="#apropos">À propos</a>
+            <a href="https://github.com" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://linkedin.com" title="LinkedIn" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:reflect.proxdns@gmail.com" title="Contact"><i class="fas fa-envelope"></i></a>
+            <button class="theme-toggle">🌙</button>
+        </nav>
+    </header>
+    <div class="carousel" id="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3" alt="Développement Web Moderne">
+                <div class="carousel-caption">
+                    <h3>Protégez vos informations personnelles</h3>
+                    <p>Évitez de partager des données sensibles sur des sites non sécurisés. Vérifiez que l'URL commence
+                        par "https://" et qu'un cadenas apparaît.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa" alt="Cloud Computing">
+                <div class="carousel-caption">
+                    <h3>Maintenez vos logiciels à jour</h3>
+                    <p>Mettez à jour votre navigateur et système d'exploitation pour corriger les failles de sécurité.
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" alt="Cybersécurité">
+                <div class="carousel-caption">
+                    <h3>Soyez prudent avec les liens</h3>
+                    <p>Ne cliquez pas sur des liens ou fichiers de sources non fiables pour éviter les malwares.</p>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <button onclick="prevSlide()">&#10094;</button>
+            <button onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+    <div class="container">
+        <section id="accueil">
+            <h2>Bienvenue</h2>
+            <p>Curieux de découvrir ce qu'une simple connexion révèle de votre appareil ?
+            <p>Cliquez sur le bloc "Afficher vos données partagées" juste ci-dessous pour voir ces informations.
+            <p>Mon objectif : vous éclairer sur ce que vos connexions en ligne dévoilent et vous partager quelques
+                bonnes pratiques pour mieux maîtriser votre trace numérique.</p>
+        </section>
+        <section id="services">
+            <h2>Trace Numérique</h2>
+            <div class="services">
+                <a href="data.html" class="service-item">
+                    <img src="https://images.unsplash.com/photo-1516321310764-8d8c4ae2b0a9" alt="Développement Logiciel"
+                        onerror="this.src='https://images.unsplash.com/photo-1498050108023-c5249f4df085'">
+                    <h3>Afficher vos données partagées</h3>
+                    <p>Liste des données partagées implicitement sur Internet, formant votre trace numérique.</p>
+                </a>
+                <a href="tips.html" class="service-item">
+                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Consulting IT">
+                    <h3>Conseils</h3>
+                    <p>Bonnes pratiques pour naviguer en sécurité et réduire votre trace numérique.</p>
+                </a>
+            </div>
+        </section>
+        <section id="apropos">
+            <h2>À Propos</h2>
+            <p>Ce projet vise à sensibiliser à l'importance de la protection des données et à la gestion de la
+                trace numérique. Mon objectif est de partager des informations pour aider les visiteurs à mieux
+                comprendre et visualiser comment limiter leur trace numérique et minimiser leur empreinte numérique.</p>
+            <p> Il me permet également de mettre en avant mes compétences en mise en réseau. J'ai créé une
+                infrastructure simple mais efficace pour héberger cette page, un défi technique que j'ai pris plaisir à
+                relever.</p>
+            <p>Le plus intéressant dans ce projet ? La gestion des serveurs ! J'ai utilisé des outils comme LXC pour la
+                conteneurisation et Ansible pour automatiser et gérer l'infrastructure. Ces technologies m'ont aidé à
+                optimiser le fonctionnement du site tout en approfondissant mes connaissances.</p>
+            <p>Merci de visiter ce site, et bonne découverte des contenus sur la protection des données et la trace
+                numérique !</p>
+        </section>
+        <section id="behind-the-scene">
+            <h2>Behind the Scene</h2>
+            <div class="services">
+                <a href="network.html" class="service-item">
+                    <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31" alt="Maintenance Réseau">
+                    <h3>Mise en Réseau</h3>
+                    <p>Découvrez l'infrastructure réseau.</p>
+                </a>
+            </div>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Email : <a href="mailto:reflect.proxdns@gmail.com">reflect.proxdns@gmail.com</a><br></p>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 Reflet Numérique. Tous droits réservés.</p>
+    </footer>
+    <script src="https://unpkg.com/maplibre-gl@2.4.0/dist/maplibre-gl.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
