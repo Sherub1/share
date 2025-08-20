@@ -1,0 +1,16 @@
+#!/bin/bash
+set -e
+
+FLAG_FILE="/var/local/lxc_provisioned"
+
+if [ -f "$FLAG_FILE" ]; then
+    echo "LXC déjà initialisé, sortie."
+    exit 0
+else
+    echo "Mise à jour au premier démarrage..."
+    apt update
+    apt upgrade -y
+    apt autoremove -y
+
+    echo "Provision terminé le $(date)" > "$FLAG_FILE"
+fi
